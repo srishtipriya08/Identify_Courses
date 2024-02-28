@@ -9,7 +9,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
  
-public class WebDevelopment {
+public class WebDevelopment{
 	public WebDriver driver;
 
 	   //constructor
@@ -29,7 +29,6 @@ public class WebDevelopment {
 	   @FindBy(xpath="//button[@class='nostyle search-button']")
 	   WebElement Button;
 	   public void clickButton() {
-//		   Button.click();
 		   JavascriptExecutor js = (JavascriptExecutor) driver;
 		   js.executeScript("arguments[0].click();", Button);
 	   }
@@ -66,14 +65,14 @@ public class WebDevelopment {
 		   js.executeScript("arguments[0].click();", apply);
 	   }
 	   
-	   @FindBy(xpath="//h3[@class='cds-CommonCard-title css-1sktkql']")
+	   @FindBy(xpath="(//h3[@class='cds-CommonCard-title css-1sktkql'])[1]")
 	   public WebElement Course1;
 	   public void Course() {
 		   JavascriptExecutor js = (JavascriptExecutor) driver;
 		   js.executeScript("arguments[0].click();", Course1);
 	   }
 	   
-	   @FindBy(xpath="/html/body/div[2]/div/div/main/div[1]/div/div/div/div/div[2]/ul[1]/li[2]/div/div/div/div/div/div[2]/div[1]/div[2]/a/h3")
+	   @FindBy(xpath="(//h3[@class='cds-CommonCard-title css-1sktkql'])[2]")
 	   public WebElement Course2;
 	   public void Course2() {
 		   JavascriptExecutor js = (JavascriptExecutor) driver;

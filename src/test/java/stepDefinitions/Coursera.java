@@ -27,15 +27,13 @@ import io.cucumber.java.en.When;
 public class Coursera extends BaseClass{
 	
 	static WebDriver driver;
-//	String oldwindow=driver.getWindowHandle();
+	public String oldwindow;
 	
 @BeforeAll	
 //@Given("the user navigate to the homepage")
 public static void SetUp() throws InterruptedException, IOException {
 	BaseClass setupdriver = new BaseClass();
 	setupdriver.setUp("os", "chrome");
-//	driver = new ChromeDriver();
-//	driver = new EdgeDriver();
 	driver = BaseClass.getDriver();
 	driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
 	String Url = "https://www.coursera.org/";
@@ -84,7 +82,8 @@ public void display_first_two_courses() throws InterruptedException {
 	
 	System.out.println("Display first two courses with name, total learning hours and rating.\n");
 
-	/*WD.Course();
+	WD.Course();
+	oldwindow=driver.getWindowHandle();
 	Set<String>handle=driver.getWindowHandles();
 	for(String newwindow1:handle)
 	{	
@@ -128,17 +127,8 @@ public void display_first_two_courses() throws InterruptedException {
 	System.out.println("Course Rating :"+r2);
 	
 	driver.close();
-	driver.switchTo().window(oldwindow);*/
+	driver.switchTo().window(oldwindow);
 	
-	List<WebElement> name = driver.findElements(By.xpath("//h3[@class='cds-CommonCard-title css-1sktkql']"));
-	List<WebElement> learningHrs = driver.findElements(By.xpath("//p[@class=' css-10r3ar9']"));
-	List<WebElement> rating = driver.findElements(By.xpath("//p[@class='cds-119 css-11uuo4b cds-121']"));
-	for(int i=1;i<3;i++) {
-		System.out.println("Course "+i+"\n");
-		System.out.println("Course name - " +name.get(i).getText()+"\n");
-		System.out.println("Total learning hours - " +learningHrs.get(i).getText()+"\n");
-		System.out.println("Rating - " +rating.get(i).getText()+"\n");
-	}
 }
 
 @Given("the user again navigate back to the homepage")

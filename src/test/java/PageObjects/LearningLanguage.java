@@ -10,7 +10,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
  
-public class LearningLanguage {
+public class LearningLanguage  {
 	public WebDriver driver;
 
 	   //constructor
@@ -23,8 +23,6 @@ public class LearningLanguage {
 	   WebElement inputBoxs;
 	   public void Input() {
 		   inputBoxs.clear();
-//		   inputBoxs.sendKeys(Keys.CONTROL + "a"); // Select all text
-//		   inputBoxs.sendKeys(Keys.BACK_SPACE);
 	   }
 	   
 	   @FindBy(xpath="//input[@class='react-autosuggest__input']")
@@ -57,7 +55,6 @@ public class LearningLanguage {
 		   js.executeScript("arguments[0].click();", close);
 	   }
 	   
-//	   @FindBy(xpath="//*[@id=\"rendered-content\"]/div/div/span/div[1]/header/div[1]/div/div/div[1]/div[2]/div/div[2]/div/div/a/div/img")
 	   @FindBy(xpath="//*[@id=\"rendered-content\"]/div/div/span/div[1]/header/div[1]/div/div/div[1]/div[2]/div/div[2]/div/div/a/div/img")
 	   WebElement HomePage;
 	   public void getHomePage() {

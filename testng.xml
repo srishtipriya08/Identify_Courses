@@ -8,11 +8,7 @@
   <parameter name="os" value="Windows" />
 <parameter name="browser" value="chrome" />
     <classes>
-        <class name="TestCases.BaseTest"/> 
-          <!-- <class name="TestCases.TC_001_Web_Development"/>  -->
-       <!-- <class name="TestCases.TC_002_Learning_Language"/>   -->
-		<!-- <class name="TestCases.TC_003_Enterprise"/>  --> 
-      <!-- <class name="PageObjects.BasePage"/> -->
+        <class name="TestCases.BaseTest"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

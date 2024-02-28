@@ -4,19 +4,23 @@
   <listeners>
     <listener class-name="Utilities.ExtentReportManager"/>
   </listeners>
-  <test thread-count="5" name="Test `name(failed)">
+  <test thread-count="5" name="Test(failed)">
     <parameter name="os" value="Windows"/>
     <parameter name="browser" value="chrome"/>
+    <groups>
+      <run>
+        <include name="regression"/>
+      </run>
+    </groups>
     <classes>
       <class name="TestCases.BaseTest">
         <methods>
-          <include name="close"/>
-          <include name="WebDevelopment"/>
           <include name="setUp"/>
-          <include name="navigate"/>
+          <include name="ErrorMessage"/>
+          <include name="CourseList"/>
           <include name="tearDown"/>
         </methods>
       </class> <!-- TestCases.BaseTest -->
     </classes>
-  </test> <!-- Test `name(failed) -->
+  </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

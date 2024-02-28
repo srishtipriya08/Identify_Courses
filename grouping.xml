@@ -11,15 +11,13 @@
    
    <groups>
    		<run>
-   		<include name = "sanity"/>
-   		<!--<include name = "regression"/>-->
+   		<!--    <include name="smoke" /> -->
+			<include name="regression" />  
+			<!--  <include name="master" /> -->
    		</run>
 	</groups>
     <classes>
     	<class name = "TestCases.BaseTest"/>
-    	<!-- <class name = "testCases.TC_002"/> -->
-    	<!-- <class name = "testCases.TC_003"/> -->
-    	<!-- <class name = "testCases.TC_004"/> -->
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

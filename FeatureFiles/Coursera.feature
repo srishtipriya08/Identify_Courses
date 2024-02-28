@@ -1,7 +1,6 @@
 Feature: Coursera
 
   Scenario: 1
-    #Given the user navigate to the homepage
     Given the user enter the Web development course
     And user click on search button
     When user select beginner level
@@ -23,4 +22,3 @@ Feature: Coursera
     And user fill the ready to transform form
     Then Submit the filled form
     And Capture the error message
-    #And close the browser
