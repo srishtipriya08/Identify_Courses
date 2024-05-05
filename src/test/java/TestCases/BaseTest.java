@@ -1,7 +1,6 @@
 package TestCases;
 
 import java.io.IOException;
-import java.time.Duration;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Set;
@@ -9,12 +8,8 @@ import java.util.Set;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.edge.EdgeDriver;
 
 import org.openqa.selenium.support.ui.Select;
-import org.testng.annotations.AfterClass;
-import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
 import PageObjects.LearningLanguage;
@@ -36,18 +31,6 @@ public class BaseTest extends BaseClass{
 	public LearningLanguage LL;
 	public Enterprise EP;
 	
-	@BeforeClass
-	public void navigate() throws IOException , InterruptedException{
-		if(driver == null) {
-		driver = new ChromeDriver();
-		}
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
-		String Url = "https://www.coursera.org/";
-		driver.get(Url);
-		driver.manage().window().maximize();
-		path= Screenshots.takeScreenshot(driver, "Home page");
-		
-	}
 	
 	@Test(priority=0 , groups = {"smoke","regression","master"})
 	public void SearchWebDevelopment() throws InterruptedException, IOException {
@@ -275,11 +258,5 @@ public class BaseTest extends BaseClass{
 		System.out.println("");
 		System.out.println("Error Message : "+errormsg.getText()+"\n");
 	}
-	
-	@AfterClass
-	public void close() throws IOException , InterruptedException {
-		driver.quit();
-	}
-	
 	
 }

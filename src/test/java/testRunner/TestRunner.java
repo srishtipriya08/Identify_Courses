@@ -8,7 +8,7 @@ import io.cucumber.junit.CucumberOptions;
 @CucumberOptions(
 		features = {".//Featurefiles/Coursera.feature"},
 		glue = "stepDefinitions",
-		plugin = {"pretty" , "html:reports/myreport.html",
+		plugin = {"pretty" , "html:reports/cucumber.html",
 				"rerun:target/rerun.txt"},
 		dryRun=false,
 		monochrome=true,

@@ -1,8 +1,5 @@
 package PageObjects;
  
-import java.util.List;
- 
-import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -34,7 +31,7 @@ public class WebDevelopment{
 	   }
 	   
 	   
-	   @FindBy(xpath="//*[@id=\"search-results-header-wrapper\"]/div/div[1]/div/div[3]/div[2]/button")
+	   @FindBy(xpath="//*[@id=\"search-results-header-wrapper\"]/div/div[1]/div/div[2]/div[2]/button")
 	   WebElement LanguageSeeMore;
 	   public void getSeeMore() {
 		   JavascriptExecutor js = (JavascriptExecutor) driver;
@@ -65,14 +62,14 @@ public class WebDevelopment{
 		   js.executeScript("arguments[0].click();", apply);
 	   }
 	   
-	   @FindBy(xpath="(//h3[@class='cds-CommonCard-title css-1sktkql'])[1]")
+	   @FindBy(xpath="(//*[@class='cds-CommonCard-title css-6ecy9b'])[1]")
 	   public WebElement Course1;
 	   public void Course() {
 		   JavascriptExecutor js = (JavascriptExecutor) driver;
 		   js.executeScript("arguments[0].click();", Course1);
 	   }
 	   
-	   @FindBy(xpath="(//h3[@class='cds-CommonCard-title css-1sktkql'])[2]")
+	   @FindBy(xpath="(//*[@class='cds-CommonCard-title css-6ecy9b'])[2]")
 	   public WebElement Course2;
 	   public void Course2() {
 		   JavascriptExecutor js = (JavascriptExecutor) driver;

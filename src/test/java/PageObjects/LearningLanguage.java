@@ -4,7 +4,6 @@ import java.util.List;
  
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -31,19 +30,19 @@ public class LearningLanguage  {
 		   search.sendKeys("Learning Language");
 	   }
 	   
-	   @FindBy(xpath="//*[@id=\"search-results-header-wrapper\"]/div/div[1]/div/div[3]/div[2]/button/span")
+	   @FindBy(xpath="//*[@id=\"search-results-header-wrapper\"]/div/div[1]/div/div[2]/div[2]/button")
 	   WebElement LanguageSeeMore1;
 	   public void getSeeMore() {
 		   JavascriptExecutor js = (JavascriptExecutor) driver;
 		   js.executeScript("arguments[0].click();", LanguageSeeMore1);
 	   }
 	   
-	   By Count = By.xpath("//*[@id=\"checkbox-group\"]/div/label/div");
+	   By Count = By.xpath("//*[@id='checkbox-group']/div/label/div");
 	   public List<WebElement> LanguageCount(){
 		   return driver.findElements(Count);
 	   }
 	   
-	   By Level = By.xpath("//*[@id=\"search-results-header-wrapper\"]/div/div[1]/div/div[5]/div/div/div/label/div");
+	   By Level = By.xpath("//*[@id=\"search-results-header-wrapper\"]/div/div[1]/div/div[4]/div/div/div/label/div");
 	   public List<WebElement> LevelCount(){
 		   return driver.findElements(Level);
 	   }

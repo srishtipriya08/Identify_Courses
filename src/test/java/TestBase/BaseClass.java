@@ -3,11 +3,11 @@ package TestBase;
 import java.io.FileReader;
 import java.io.IOException;
 import java.net.URL;
+import java.time.Duration;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Properties;
 
-import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.Platform;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -88,6 +88,8 @@ public class BaseClass {
 		String baseURL = properties.getProperty("URL");
 		
 		driver.get(baseURL);
+		
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
 		
 		driver.manage().window().maximize();
 		

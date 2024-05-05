@@ -5,18 +5,15 @@ import java.time.Duration;
 import java.util.List;
 import java.util.Set;
 
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.Select;
 
 import PageObjects.LearningLanguage;
 import PageObjects.WebDevelopment;
 import PageObjects.Enterprise;
 import TestBase.BaseClass;
-import Utilities.Screenshots;
 import io.cucumber.java.AfterAll;
 import io.cucumber.java.BeforeAll;
 import io.cucumber.java.en.Given;
@@ -30,7 +27,6 @@ public class Coursera extends BaseClass{
 	public String oldwindow;
 	
 @BeforeAll	
-//@Given("the user navigate to the homepage")
 public static void SetUp() throws InterruptedException, IOException {
 	BaseClass setupdriver = new BaseClass();
 	setupdriver.setUp("os", "chrome");
@@ -253,7 +249,6 @@ public void capture_the_error_message() throws InterruptedException {
 }
 
 @AfterAll
-//@Then("close the browser")
 public static  void tearDown() {
 	driver.quit();
 }

@@ -1,8 +1,10 @@
-# Selenium Automation Testing Project: Identifying Courses
+# Selenium Automation Testing Project: Identify Courses
  
 ## Project Overview
  
-This Selenium automation testing project focuses on automating tasks related to the coursera.org website. The primary objectives include searching for courses, capturing course details, navigating through the portal, filling form, and capturing error message. The project uses various dependencies and libraries to facilitate automation.
+This Selenium automation testing project focuses on automating tasks related to the coursera.org website. 
+The primary objectives include searching for courses, capturing course details, navigating through the portal, 
+filling form, and capturing error message. The project uses various dependencies and libraries to facilitate automation.
  
 ## Project Structure
  
